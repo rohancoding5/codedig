@@ -1,0 +1,37 @@
+{
+  "name": "codedig",
+  "version": "0.1.0",
+  "description": "Digs up code nobody understands anymore and reports on it using real references, git history, and import links instead of a plain unused flag.",
+  "type": "module",
+  "bin": {
+    "codedig": "./dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/cli.js",
+    "test": "npm run build && node --test dist/__tests__/*.test.js"
+  },
+  "keywords": [
+    "ai",
+    "dead-code",
+    "git",
+    "developer-tools",
+    "cli",
+    "static-analysis"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.124.0",
+    "zod": "^4.5.4"
+  },
+  "devDependencies": {
+    "@types/node": "^26.5.0",
+    "typescript": "^7.0.2"
+  }
+}
